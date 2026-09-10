@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>挠脚心文章校花-校园轻小说阅读与同人创作交流指南</title>
+<meta name="description" content="挠脚心文章校花主题阅读站，提供校园轻小说、青春同人文章的分类阅读、创作交流与内容筛选建议，帮助读者找到符合口味的校园题材作品。">
+<meta name="keywords" content="挠脚心文章校花,校园小说,青春同人,轻小说阅读,校园题材文章,同人创作">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --pink:#ff7fa8;
+  --pink-deep:#e8548a;
+  --pink-soft:#ffe6ef;
+  --purple:#8b6bd9;
+  --purple-soft:#f1ecff;
+  --ink:#2c2438;
+  --ink-soft:#5d5470;
+  --line:#f0dbe6;
+  --bg:#fffafc;
+  --white:#ffffff;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(180,110,150,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px;}
+
+/* ============ 顶部导航 ============ */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,252,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;height:66px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;}
+.logo-mark{
+  width:34px;height:34px;border-radius:11px;
+  background:linear-gradient(135deg,var(--pink),var(--purple));
+  display:grid;place-items:center;color:#fff;font-size:17px;
+  box-shadow:0 6px 14px rgba(232,84,138,.28);
+}
+.logo small{display:block;font-size:11px;font-weight:500;color:var(--ink-soft);letter-spacing:1px;}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap;}
+.nav-links a{
+  padding:8px 14px;border-radius:999px;font-size:14.5px;color:var(--ink-soft);
+  transition:.22s;
+}
+.nav-links a:hover{background:var(--pink-soft);color:var(--pink-deep);}
+.nav-cta{
+  padding:9px 20px;border-radius:999px;font-size:14px;font-weight:600;color:#fff;
+  background:linear-gradient(135deg,var(--pink),var(--purple));
+  box-shadow:0 6px 16px rgba(232,84,138,.30);
+  white-space:nowrap;
+}
+.nav-cta:hover{filter:brightness(1.06);}
+.menu-toggle{display:none;background:none;border:0;font-size:22px;color:var(--pink-deep);cursor:pointer;}
+
+/* ============ 首屏 ============ */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,127,168,.20), transparent 46%),
+    radial-gradient(circle at 88% 8%, rgba(139,107,217,.18), transparent 44%),
+    linear-gradient(180deg,#fff5f9 0%,#fffafc 100%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);
+  padding:6px 15px;border-radius:999px;font-size:13px;color:var(--pink-deep);
+  box-shadow:var(--shadow);margin-bottom:20px;
+}
+.hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--pink);display:inline-block;}
+.hero h1{
+  font-size:clamp(28px,4vw,42px);line-height:1.32;font-weight:800;letter-spacing:.5px;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(120deg,var(--pink-deep),var(--purple));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{
+  margin-top:18px;font-size:16px;color:var(--ink-soft);max-width:560px;
+}
+.hero-actions{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-size:15px;font-weight:600;
+  transition:.22s;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{
+  color:#fff;background:linear-gradient(135deg,var(--pink),var(--purple));
+  box-shadow:0 10px 24px rgba(232,84,138,.28);
+}
+.btn-primary:hover{transform:translateY(-2px);}
+.btn-ghost{
+  background:#fff;border-color:var(--line);color:var(--ink-soft);
+}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink-deep);}
+.hero-stats{
+  display:flex;gap:30px;margin-top:38px;flex-wrap:wrap;
+}
+.hero-stats div strong{
+  display:block;font-size:22px;font-weight:800;color:var(--pink-deep);
+}
+.hero-stats div span{font-size:13px;color:var(--ink-soft);}
+
+.hero-card{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:26px;box-shadow:var(--shadow);
+}
+.hero-card h3{font-size:16px;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.hero-card h3::before{
+  content:"";width:5px;height:17px;border-radius:3px;
+  background:linear-gradient(180deg,var(--pink),var(--purple));
+}
+.mini-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.mini-list li{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:11px 13px;border-radius:13px;background:var(--pink-soft);
+  font-size:14px;color:var(--ink-soft);transition:.2s;
+}
+.mini-list li:hover{background:var(--purple-soft);transform:translateX(3px);}
+.mini-list b{color:var(--pink-deep);font-size:13px;min-width:20px;}
+
+/* ============ 通用区块 ============ */
+section{padding:58px 0;}
+.sec-head{margin-bottom:32px;max-width:720px;}
+.sec-tag{
+  display:inline-block;font-size:12.5px;letter-spacing:2px;font-weight:700;
+  color:var(--purple);background:var(--purple-soft);
+  padding:4px 13px;border-radius:999px;margin-bottom:12px;
+}
+.sec-head h2{font-size:clamp(22px,3vw,29px);font-weight:800;letter-spacing:.4px;}
+.sec-head p{margin-top:10px;color:var(--ink-soft);font-size:15px;}
+
+/* ============ 分类阅读 ============ */
+.cat-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:20px;
+}
+.cat-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;transition:.25s;position:relative;overflow:hidden;
+}
+.cat-card::after{
+  content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;
+  border-radius:50%;background:var(--pink-soft);opacity:.7;transition:.3s;
+}
+.cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#f5c6d8;}
+.cat-card:hover::after{transform:scale(1.4);}
+.cat-ico{
+  width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  font-size:20px;background:linear-gradient(135deg,var(--pink-soft),var(--purple-soft));
+  margin-bottom:14px;position:relative;z-index:1;
+}
+.cat-card h3{font-size:16.5px;margin-bottom:8px;position:relative;z-index:1;}
+.cat-card p{font-size:14px;color:var(--ink-soft);position:relative;z-index:1;}
+
+/* ============ 精选文章 ============ */
+.article-layout{
+  display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start;
+}
+.article-main{
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:30px;box-shadow:var(--shadow);
+}
+.article-main h3{font-size:21px;margin-bottom:14px;line-height:1.5;}
+.article-meta{
+  display:flex;gap:16px;font-size:13px;color:#9b8fac;margin-bottom:18px;flex-wrap:wrap;
+}
+.article-main p{font-size:15px;color:var(--ink-soft);margin-bottom:14px;}
+.article-main p:last-of-type{margin-bottom:0;}
+.quote-box{
+  margin:20px 0;padding:16px 20px;border-left:4px solid var(--pink);
+  background:var(--pink-soft);border-radius:0 14px 14px 0;
+  font-size:14.5px;color:var(--ink-soft);
+}
+.side-stack{display:flex;flex-direction:column;gap:20px;}
+.side-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;
+}
+.side-card h4{font-size:15.5px;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.side-card h4::before{content:"◆";color:var(--pink);font-size:11px;}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px;}
+.tag-cloud span{
+  font-size:13px;padding:5px 13px;border-radius:999px;
+  background:var(--purple-soft);color:var(--purple);transition:.2s;cursor:default;
+}
+.tag-cloud span:hover{background:var(--pink-soft);color:var(--pink-deep);}
+.rank-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.rank-list li{
+  display:flex;gap:12px;align-items:center;font-size:14px;color:var(--ink-soft);
+  padding-bottom:12px;border-bottom:1px dashed var(--line);
+}
+.rank-list li:last-child{border-bottom:0;padding-bottom:0;}
+.rank-list em{
+  font-style:normal;width:22px;height:22px;border-radius:7px;flex:0 0 auto;
+  display:grid;place-items:center;font-size:12px;font-weight:700;
+  background:var(--pink-soft);color:var(--pink-deep);
+}
+.rank-list li:nth-child(1) em{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;}
+.rank-list li:nth-child(2) em{background:#ffd9e6;color:var(--pink-deep);}
+.rank-list li:nth-child(3) em{background:#e6ddff;color:var(--purple);}
+
+/* ============ 创作指南 ============ */
+.guide{background:linear-gradient(180deg,#fffafc,#fdf5ff);}
+.guide-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
+}
+.guide-item{
+  background:#fff;border-radius:var(--radius);padding:24px;
+  border:1px solid var(--line);position:relative;
+}
+.guide-item .num{
+  font-size:30px;font-weight:800;line-height:1;
+  background:linear-gradient(135deg,var(--pink),var(--purple));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:12px;display:block;
+}
+.guide-item h3{font-size:16px;margin-bottom:9px;}
+.guide-item p{font-size:14px;color:var(--ink-soft);}
+
+/* ============ 阅读提示 ============ */
+.tips-box{
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:32px;box-shadow:var(--shadow);
+}
+.tips-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:22px;
+}
+.tip{
+  padding-left:18px;border-left:3px solid var(--purple-soft);
+}
+.tip h4{font-size:15px;margin-bottom:7px;color:var(--ink);}
+.tip p{font-size:14px;color:var(--ink-soft);}
+
+/* ============ FAQ ============ */
+.faq-list{display:flex;flex-direction:column;gap:14px;max-width:900px;}
+.faq-item{
+  background:#fff;border:1px solid var(--line);border-radius:15px;
+  overflow:hidden;transition:.25s;
+}
+.faq-item:hover{border-color:#f5c6d8;}
+.faq-q{
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:18px 22px;font-size:15.5px;font-weight:600;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+  font-family:inherit;
+}
+.faq-q span{color:var(--pink-deep);font-size:20px;transition:.25s;flex:0 0 auto;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .32s ease;
+  padding:0 22px;font-size:14.5px;color:var(--ink-soft);
+}
+.faq-item.open .faq-a{max-height:340px;padding-bottom:20px;}
+
+/* ============ 订阅条 ============ */
+.subscribe{
+  background:linear-gradient(135deg,#ff8fb4,#9b7ee6);
+  border-radius:26px;padding:44px 36px;color:#fff;text-align:center;
+  box-shadow:0 18px 40px rgba(180,110,190,.28);
+}
+.subscribe h2{font-size:clamp(21px,3vw,27px);margin-bottom:12px;}
+.subscribe p{font-size:15px;opacity:.92;max-width:600px;margin:0 auto 24px;}
+.sub-form{
+  display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center;
+}
+.sub-form input{
+  flex:1;min-width:200px;border:0;border-radius:999px;padding:13px 20px;
+  font-size:14.5px;font-family:inherit;outline:none;color:var(--ink);
+}
+.sub-form button{
+  border:0;border-radius:999px;padding:13px 28px;font-size:14.5px;font-weight:700;
+  background:#fff;color:var(--pink-deep);cursor:pointer;font-family:inherit;transition:.2s;
+}
+.sub-form button:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.15);}
+.sub-note{font-size:12.5px;opacity:.8;margin-top:14px;}
+
+/* ============ 页脚 ============ */
+.site-footer{
+  background:#2c2438;color:#c9c0d8;padding:52px 0 26px;margin-top:20px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;
+}
+.footer-brand .logo{color:#fff;margin-bottom:14px;}
+.footer-brand .logo small{color:#a99dbb;}
+.footer-brand p{font-size:13.5px;line-height:1.85;color:#a99dbb;max-width:300px;}
+.footer-col h4{font-size:14.5px;color:#fff;margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:13.5px;color:#a99dbb;transition:.2s;}
+.footer-col a:hover{color:var(--pink);}
+.footer-bottom{
+  margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.10);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12.5px;color:#8d829e;
+}
+
+/* ============ 响应式 ============ */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .article-layout{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:720px){
+  .nav-links{
+    display:none;position:absolute;top:66px;left:0;right:0;
+    background:#fff;flex-direction:column;padding:14px 20px 20px;
+    border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(180,110,150,.10);
+  }
+  .nav-links.show{display:flex;}
+  .nav-links a{padding:11px 14px;}
+  .menu-toggle{display:block;}
+  .nav-cta{display:none;}
+  section{padding:44px 0;}
+  .hero{padding:44px 0 40px;}
+  .article-main{padding:22px;}
+  .tips-box,.subscribe{padding:26px 20px;}
+  .hero-stats{gap:22px;}
+}
+@media(max-width:520px){
+  .footer-grid{grid-template-columns:1fr;}
+  .header-inner{height:60px;}
+  .logo{font-size:17px;}
+  .logo small{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">轻</span>
+      <span>轻语校园<small>QINGYU CAMPUS</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#categories">题材分类</a>
+      <a href="#featured">精选文章</a>
+      <a href="#guide">创作指南</a>
+      <a href="#tips">阅读提示</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#subscribe" class="nav-cta">订阅更新</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开导航">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-badge"><i></i>校园青春 · 轻小说 · 同人创作</span>
+        <h1>挠脚心文章校花<em>主题阅读与创作交流</em></h1>
+        <p class="hero-lead">
+          这是一个围绕校园青春题材文章整理与分享的内容页面。如果你在搜索“挠脚心文章校花”这类关键词，
+          通常是想找到轻松、日常、带校园气息的短篇故事或同人文本。本页从题材分类、阅读方式、
+          创作思路和内容筛选四个方面，帮你更高效地找到想看的内容，也帮助写作者理清表达方向。
+        </p>
+        <div class="hero-actions">
+          <a href="#categories" class="btn btn-primary">浏览题材分类</a>
+          <a href="#guide" class="btn btn-ghost">看创作指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>校园题材方向</span></div>
+          <div><strong>4</strong><span>写作要点梳理</span></div>
+          <div><strong>8</strong><span>常见问题解答</span></div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>本周阅读热度方向</h3>
+        <ul class="mini-list">
+          <li><b>01</b><span>校园日常向短篇：以同桌、社团、晚自习为背景的轻松故事</span></li>
+          <li><b>02</b><span>青春成长向：围绕性格转变与自我认同展开的叙事</span></li>
+          <li><b>03</b><span>同人设定向：基于既有角色展开的二次创作片段</span></li>
+          <li><b>04</b><span>轻喜剧向：节奏明快、对白密集的短篇结构</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 题材分类 -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">题材分类</span>
+        <h2>按阅读偏好找到合适的校园文章</h2>
+        <p>不同读者对“校园文章”的期待差异很大：有人想读轻松日常，有人偏爱成长叙事，也有人只看同人设定。先确定方向，再筛选内容，效率会高很多。</p>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-ico">🎒</div>
+          <h3>校园日常</h3>
+          <p>以教室、走廊、食堂、宿舍为场景，节奏舒缓，重点在人物互动与生活细节，适合碎片时间阅读。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-ico">🌱</div>
+          <h3>青春成长</h3>
+          <p>关注角色的心理变化与关系推进，故事通常有明确的情绪起伏，篇幅偏中短，适合完整阅读。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-ico">🎭</div>
+          <h3>同人设定</h3>
+          <p>基于已有作品或角色展开二次创作，阅读前建议先了解原作设定，代入感会更强。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-ico">😄</div>
+          <h3>轻喜剧向</h3>
+          <p>对白密集、节奏轻快，常以误会和反差制造笑点，适合想放松心情时阅读。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-ico">📖</div>
+          <h3>短篇合集</h3>
+          <p>单篇独立成章，主题相近但人物不同，方便按心情挑选，也适合作为写作参考样本。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-ico">🖊️</div>
+          <h3>创作练习</h3>
+          <p>面向写作者的练笔方向，包含场景描写、人物对话、节奏控制等可拆解学习的部分。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选文章 -->
+  <section id="featured">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">精选阅读</span>
+        <h2>一篇示例文本的结构拆解</h2>
+        <p>下面用一段示例文本说明这类校园题材文章的常见写法，方便读者判断是否符合自己的口味，也方便写作者参考结构。</p>
+      </div>
+      <div class="article-layout">
+        <article class="article-main">
+          <h3>《晚自习后的走廊》——校园轻喜剧片段示例</h3>
+          <div class="article-meta">
+            <span>题材：校园日常 / 轻喜剧</span>
+            <span>篇幅：短篇</span>
+            <span>视角：第三人称</span>
+          </div>
+          <p>
+            放学铃响过之后，走廊里的灯只亮了一半。林知夏抱着练习册往外走，脚步放得很轻，
+            因为隔壁班还在补课。她刚拐过楼梯口，就听见身后传来一阵急促的脚步声。
+          </p>
+          <p>
+            “你走那么快干嘛？”周予安追上来，手里还拎着没喝完的牛奶，“我刚才喊你三遍了。”
+            “我以为你在跟别人说话。”
+            “这层楼除了你还有谁。”
+          </p>
+          <div class="quote-box">
+            这类文章的关键不在于情节多复杂，而在于对话是否自然、场景是否有画面感。
+            一段简单的走廊对话，只要节奏和语气到位，就能让读者代入角色关系。
+          </div>
+          <p>
+            两人一前一后走下楼梯，谁也没再说话。到了校门口，周予安把牛奶塞进她手里：
+            “明天还你练习册。”林知夏愣了一下，低头看见牛奶盒上还留着一点温度。
+            她没说什么，只是把盒子握紧了些。
+          </p>
+          <p>
+            全文到这里结束，没有额外的解释，也没有强行升华。留白本身就是这类短篇的一部分，
+            读者会自己补完角色之间没有说出口的部分。
+          </p>
+        </article>
+
+        <aside class="side-stack">
+          <div class="side-card">
+            <h4>常见标签</h4>
+            <div class="tag-cloud">
+              <span>校园日常</span>
+              <span>青春成长</span>
+              <span>同人创作</span>
+              <span>轻喜剧</span>
+              <span>短篇</span>
+              <span>对话流</span>
+              <span>第三人称</span>
+              <span>留白结尾</span>
+              <span>治愈向</span>
+            </div>
+          </div>
+          <div class="side-card">
+            <h4>读者关注方向</h4>
+            <ul class="rank-list">
+              <li><em>1</em><span>人物关系是否自然可信</span></li>
+              <li><em>2</em><span>场景描写是否有画面感</span></li>
+              <li><em>3</em><span>对话节奏是否轻快</span></li>
+              <li><em>4</em><span>篇幅是否适合碎片阅读</span></li>
+              <li><em>5</em><span>结尾是否留有回味空间</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作指南 -->
+  <section id="guide" class="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">创作指南</span>
+        <h2>写校园题材短文的四个着力点</h2>
+        <p>如果你打算自己动笔，以下四点比堆砌情节更重要。它们决定了文章读起来是“像真的”还是“像编的”。</p>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-item">
+          <span class="num">01</span>
+          <h3>先定场景，再定事件</h3>
+          <p>校园题材的优势在于场景熟悉。先选一个具体地点，比如教室后排、操场看台、放学路上，再让事件自然发生，比先想情节再硬塞场景更顺。</p>
+        </article>
+        <article class="guide-item">
+          <span class="num">02</span>
+          <h3>对话要像真人说话</h3>
+          <p>避免每句话都完整、工整。真实的对话有停顿、有打断、有答非所问。适当加入语气词和短句，人物会立刻鲜活起来。</p>
+        </article>
+        <article class="guide-item">
+          <span class="num">03</span>
+          <h3>细节胜过形容词</h3>
+          <p>与其写“她很紧张”，不如写“她把笔帽拧开又拧上”。具体动作能让读者自己感受到情绪，比直接下判断更有说服力。</p>
+        </article>
+        <article class="guide-item">
+          <span class="num">04</span>
+          <h3>结尾不必说尽</h3>
+          <p>短篇的魅力在于留白。把情绪推到高点后停住，让读者自己想象后续，往往比写一个完整结局更耐读。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读提示 -->
+  <section id="tips">
+    <div class="wrap">
+      <div class="tips-box">
+        <div class="sec-head" style="margin-bottom:0;">
+          <span class="sec-tag">阅读提示</span>
+          <h2>筛选内容时值得注意的几点</h2>
+          <p>网络上的校园题材文章质量参差不齐，掌握几个判断标准，可以少走很多弯路。</p>
+        </div>
+        <div class="tips-grid">
+          <div class="tip">
+            <h4>看开篇三行</h4>
+            <p>好的短篇通常在前三行就交代了场景和人物关系。如果开头全是空泛抒情，后续内容往往也比较松散。</p>
+          </div>
+          <div class="tip">
+            <h4>注意标签是否准确</h4>
+            <p>标签与正文不符是常见问题。阅读前扫一眼标签，能快速判断这篇是否属于你想看的类型。</p>
+          </div>
+          <div class="tip">
+            <h4>关注更新与完结状态</h4>
+            <p>连载类内容建议先确认更新频率和是否完结，避免读到一半中断，影响整体阅读体验。</p>
+          </div>
+          <div class="tip">
+            <h4>尊重原作与作者</h4>
+            <p>同人创作应在合理范围内进行，阅读时也建议支持原创作者，不随意搬运或二次传播未授权内容。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">常见问题</span>
+        <h2>关于这类校园文章，读者常问的几个问题</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">这类校园题材文章一般在哪里可以读到？<span>+</span></button>
+          <div class="faq-a"><p>常见渠道包括轻小说阅读平台、同人创作社区以及部分文学类论坛。不同平台的侧重点不同，有的偏向原创连载，有的偏向同人短篇。建议先明确自己想读的类型，再选择对应平台。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">如何判断一篇文章是否适合自己？<span>+</span></button>
+          <div class="faq-a"><p>可以先看标签、开篇段落和篇幅长度。标签决定题材方向，开篇决定文笔风格，篇幅决定阅读时间成本。三者结合，基本能判断是否符合预期。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">想自己写，应该从什么类型入手？<span>+</span></button>
+          <div class="faq-a"><p>建议从校园日常短篇开始。场景熟悉、人物关系简单、篇幅可控，容易完成。写顺之后再尝试成长叙事或同人设定，难度会逐步提升。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">同人创作需要注意什么？<span>+</span></button>
+          <div class="faq-a"><p>核心是尊重原作设定和原作者意愿。不篡改核心人物性格、不用于商业用途、不冒充官方内容，是基本的创作边界。发布前了解所在平台的相关规则也很重要。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">短篇和连载，哪种更适合新手阅读？<span>+</span></button>
+          <div class="faq-a"><p>短篇更适合入门。单篇独立、结构完整，不需要追更，也不容易因为中断而影响体验。连载则适合已经明确喜欢某个设定或作者的读者。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">文章中出现不适内容怎么办？<span>+</span></button>
+          <div class="faq-a"><p>直接关闭页面即可，不必勉强阅读。多数平台都提供屏蔽标签或举报功能，合理使用这些工具可以改善后续的推荐内容。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">阅读这类内容会影响学习吗？<span>+</span></button>
+          <div class="faq-a"><p>关键在于时间安排。把阅读当作休息方式之一，控制单次时长，通常不会产生明显影响。如果发现自己难以自控，可以设定固定的阅读时段。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">怎样提高自己的写作水平？<span>+</span></button>
+          <div class="faq-a"><p>多读、多写、多改。读的时候留意别人怎么处理对话和场景，写的时候先完成再完善，改的时候重点检查节奏和逻辑。坚持一段时间，进步会很明显。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 订阅 -->
+  <section id="subscribe">
+    <div class="wrap">
+      <div class="subscribe">
+        <h2>订阅校园题材更新提醒</h2>
+        <p>留下邮箱，我们会在整理出新的校园题材文章合集或创作专题时通知你。不频繁打扰，只发有价值的内容。</p>
+        <form class="sub-form" onsubmit="return handleSubscribe(event)">
+          <input type="email" placeholder="请输入你的邮箱地址" required aria-label="邮箱地址">
+          <button type="submit">订阅</button>
+        </form>
+        <p class="sub-note">我们尊重你的隐私，邮箱仅用于更新通知，不会用于其他用途。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">轻</span>
+          <span>轻语校园<small>QINGYU CAMPUS</small></span>
+        </div>
+        <p>一个围绕校园青春题材文章整理、分享与创作交流的内容页面，帮助读者找到合口味的内容，也帮助写作者理清表达方向。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#categories">题材分类</a></li>
+          <li><a href="#featured">精选文章</a></li>
+          <li><a href="#guide">创作指南</a></li>
+          <li><a href="#tips">阅读提示</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>读者帮助</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#subscribe">更新订阅</a></li>
+          <li><a href="#categories">标签说明</a></li>
+          <li><a href="#tips">内容筛选</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>创作相关</h4>
+        <ul>
+          <li><a href="#guide">写作要点</a></li>
+          <li><a href="#guide">场景描写</a></li>
+          <li><a href="#guide">对话技巧</a></li>
+          <li><a href="#guide">短篇结构</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 轻语校园 · 内容整理与分享</span>
+      <span>本站内容仅供阅读与写作参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 移动端导航展开
+  var menuToggle = document.getElementById('menuToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+    });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navLinks.classList.remove('show');
+      });
+    });
+  }
+
+  // FAQ 折叠
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) {
+        i.classList.remove('open');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+
+  // 订阅表单（仅前端提示，不发送数据）
+  function handleSubscribe(e) {
+    e.preventDefault();
+    var input = e.target.querySelector('input');
+    if (input && input.value) {
+      alert('已记录你的订阅意向，感谢关注！');
+      input.value = '';
+    }
+    return false;
+  }
+</script>
+
+</body>
+                </html>
